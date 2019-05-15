@@ -4,29 +4,34 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.shalastra</groupId>
-  <artifactId>jcache-demo</artifactId>
+  <artifactId>jcache-providers</artifactId>
   <packaging>pom</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>jcache-demo</name>
-  <description>Demo project for Spring Boot</description>
+  <name>JCache Providers</name>
+  <description>Syntax comparison of the most popular Jcache implementations</description>
 
   <properties>
     <java.version>1.8</java.version>
+    <jcache.version>1.1.0</jcache.version>
   </properties>
 
 
   <modules>
     <module>jcache-ignite</module>
     <module>jcache-hazelcast</module>
+    <module>jcache-ehcache</module>
+    <module>jcache-infinispan</module>
   </modules>
 
-  <dependencies>
-    <dependency>
-      <groupId>javax.cache</groupId>
-      <artifactId>cache-api</artifactId>
-      <version>1.1.0</version>
-    </dependency>
-  </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>javax.cache</groupId>
+        <artifactId>cache-api</artifactId>
+        <version>${jcache.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <plugins>
