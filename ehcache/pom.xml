@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>jcache-ehcache</artifactId>
+  <artifactId>ehcache</artifactId>
 
   <properties>
     <ehcache.version>3.7.0</ehcache.version>

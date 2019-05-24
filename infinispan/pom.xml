@@ -8,7 +8,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>jcache-infinispan</artifactId>
+  <artifactId>infinispan</artifactId>
 
   <properties>
     <infinispan.version>9.4.13.Final</infinispan.version>

@@ -19,10 +19,10 @@
 
 
   <modules>
-    <module>jcache-ignite</module>
-    <module>jcache-hazelcast</module>
-    <module>jcache-ehcache</module>
-    <module>jcache-infinispan</module>
+    <module>ignite</module>
+    <module>hazelcast</module>
+    <module>ehcache</module>
+    <module>infinispan</module>
     <module>jcache</module>
   </modules>
 
