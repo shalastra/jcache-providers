@@ -8,11 +8,13 @@
   <packaging>pom</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>JCache Providers</name>
-  <description>Syntax comparison of the most popular Jcache implementations</description>
+
+  <description>Syntax comparison between JCache and vendor specific implementations</description>
 
   <properties>
     <java.version>1.8</java.version>
-    <jcache.version>1.1.0</jcache.version>
+    <lombok.version>1.18.8</lombok.version>
+    <logback.version>1.2.3</logback.version>
   </properties>
 
 
@@ -21,17 +23,23 @@
     <module>jcache-hazelcast</module>
     <module>jcache-ehcache</module>
     <module>jcache-infinispan</module>
+    <module>jcache</module>
   </modules>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>javax.cache</groupId>
-        <artifactId>cache-api</artifactId>
-        <version>${jcache.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${logback.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
