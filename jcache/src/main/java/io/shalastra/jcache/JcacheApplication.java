@@ -33,6 +33,23 @@ public class JcacheApplication {
       String value = cache.get("key1");
 
       log.info(value);
+
+
+      /**
+       * ENTRY PROCESSOR
+       */
+      String newValue = "newValue1";
+      cache.invoke("key2", (entry, arguments) -> {
+        String anotherValue = entry.getValue();
+        log.info(anotherValue);
+
+        if (anotherValue == "value2") {
+          entry.setValue(newValue);
+        }
+
+        return null;
+      });
+
     } finally {
       cacheManager.close();
     }
