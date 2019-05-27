@@ -32,5 +32,6 @@ public class EhcacheApplication {
       String value = cache.get("key1");
 
       log.info(value);
+    }
   }
 }
