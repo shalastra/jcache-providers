@@ -21,6 +21,17 @@
       <artifactId>ehcache</artifactId>
       <version>${ehcache.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.ehcache</groupId>
+      <artifactId>ehcache-transactions</artifactId>
+      <version>${ehcache.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.marcus-nl.btm</groupId>
+      <artifactId>btm</artifactId>
+      <version>3.0.0-mk1</version>
+    </dependency>
+
   </dependencies>
 
 </project>
